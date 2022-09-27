@@ -1,0 +1,31 @@
+body {
+    background-color: #131313;
+}
+
+.img-wrapper {
+    margin: 150px auto;
+    max-width: 150px;
+    position: relative;
+}
+
+.img-wrapper img {
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+}
+
+.img-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: -15px;
+    border: 6px solid #131313;
+    border-bottom-color: #ababab;
+    border-top-color: #ababab;
+    border-radius: 50%;
+    z-index: -1;
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg);}
+}
